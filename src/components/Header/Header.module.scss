@@ -1,0 +1,43 @@
+@import "../../styles/helpers/colors";
+@import "../../styles/helpers/breakpoints";
+
+.header {
+  display: grid;
+  grid-row-gap: 34px;
+  > div:first-child {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    > div {
+      display: grid;
+      grid-auto-flow: column;
+      grid-column-gap: 5px;
+      justify-content: start;
+    }
+  }
+
+  padding: 12px 42px;
+  @include desktop {
+    padding: 20px 0 34px;
+    // padding: 0 0 34px;
+  }
+}
+
+.title {
+  position: relative;
+  @include desktop {
+    margin-bottom: 4px;
+  }
+  &::before {
+    position: absolute;
+    left: 0;
+    width: 54px;
+    height: 2px;
+    bottom: 2px;
+    @include desktop {
+      height: 4px;
+      bottom: -4px;
+    }
+    background: $primaryColor;
+    content: "";
+  }
+}

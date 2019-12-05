@@ -1,0 +1,10 @@
+$primaryColor: #D42026;
+$secondaryColor:#4E4E4E;
+$whiteColor: #fff;
+$blackColor: #000,
+:export {
+  primary: $primaryColor;
+  secondary: $secondaryColor;
+  white: $whiteColor;
+  black: $blackColor;
+}

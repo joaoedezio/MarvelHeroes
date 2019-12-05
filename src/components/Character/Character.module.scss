@@ -1,0 +1,32 @@
+@import "../../styles/helpers/colors";
+@import "../../styles/helpers/breakpoints";
+
+.character {
+  display: grid;
+  border-bottom: 1px solid $secondaryColor;
+  grid-column-gap: 10px;
+  @include desktop {
+    grid-template-columns: 1fr 3fr;
+  }
+  align-items: center;
+  padding: 20px 10px;
+  > div:first-child {
+    display: grid;
+    grid-template-columns: 58px 1fr;
+    grid-column-gap: 25px;
+    align-items: center;
+  }
+
+  cursor: pointer;
+
+  &:hover {
+    background: rgba(#D42026, 0.1);
+  }
+}
+
+.avatar {
+  border-radius: 50%;
+  background: $primaryColor;
+  width: 58px;
+  height: 58px;
+}

@@ -1,0 +1,13 @@
+@import "breakpoints";
+
+.hideOnDesktop {
+  @include desktop {
+    display: none !important;
+  }
+}
+
+.hideOnMobile {
+  @include phone {
+    display: none !important;
+  }
+}
