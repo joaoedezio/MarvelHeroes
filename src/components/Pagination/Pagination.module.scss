@@ -1,0 +1,60 @@
+@import "../../styles/helpers/colors";
+@import "../../styles/helpers/breakpoints";
+
+.paginationContainer {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: stretch;
+  padding: 18px 30px 24px;
+  @include desktop {
+    justify-content: center;
+    grid-column-gap: 5px;
+    padding: 16px 0;
+  }
+
+  align-self: center;
+
+  button:first-of-type {
+    transform: rotateY(180deg);
+  }
+
+  button {
+    display: grid;
+    align-content: center;
+    border: none;
+    font-size: 21px;
+    color: $primaryColor;
+  }
+}
+
+.disabledButton {
+  color: rgba($secondaryColor, 0.35) !important;
+  cursor: not-allowed;
+}
+
+.pagination {
+  display: grid;
+  justify-self: center;
+  align-self: center;
+  justify-content: center;
+  grid-auto-flow: column;
+  grid-column-gap: 20px;
+}
+
+.pageIndicator {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  height: 32px;
+  min-width: 32px;
+
+  border: 1px solid $primaryColor;
+  border-radius: 30px;
+  padding: 0 5px;
+  cursor: pointer;
+}
+
+.activePage {
+  background: $primaryColor;
+  // display: grid !important;
+}

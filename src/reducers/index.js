@@ -1,8 +1,7 @@
 import { combineReducers } from "redux";
 
+import characters from "./characters";
+
 export default combineReducers({
-  // authReducer: auth,
-  // userReducer: user,
-  // simulationReducer: simulation,
-  // proposalReducer: proposal,
+  charactersReducer: characters,
 });

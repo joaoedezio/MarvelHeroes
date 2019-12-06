@@ -6,10 +6,14 @@ import Image from "../Image";
 
 const Character = props => {
   return (
-    <div className={styles.character}>
+    <div
+      className={styles.character} title={`Ver detalhes de ${props.character.name}`}
+      onClick={() => props.onClick()}
+    >
       <div>
         <Image
           className={styles.avatar}
+          src={props.character.avatar}
         />
         <Text>
           {props.character.name}
@@ -18,7 +22,7 @@ const Character = props => {
       <Text
         className={hideOnMobile}
       >
-        {props.character.description}
+        {props.character.description || "Sem descrição"}
       </Text>
     </div>
   )

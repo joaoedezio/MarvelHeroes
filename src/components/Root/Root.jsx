@@ -1,17 +1,12 @@
 import React, { Component } from "react";
-import { connect } from "react-redux";
 
 import { createBrowserHistory } from "history";
 
-import HeroesList from "../../pages/HeroesList";
+import Characters from "../../pages/Characters";
 
 import styles from "./Root.module.scss";
 
 const history = createBrowserHistory();
-
-const mapStateToProps = store => ({
-
-});
 
 class Root extends Component {
 
@@ -44,10 +39,12 @@ class Root extends Component {
           this.container = el;
         }}
       >
-        <HeroesList />
+        <Characters
+          history={history}
+        />
       </div>
     );
   }
 }
 
-export default connect(mapStateToProps)(Root);
+export default Root;

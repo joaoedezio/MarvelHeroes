@@ -29,6 +29,7 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <div id="modal"></div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -39,5 +40,26 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script>
+      function atOnload() {
+          const head  = document.getElementsByTagName('head')[0];
+          // custom fonts
+          let cssId = 'customIcons';
+          if (!document.getElementById(cssId))
+          {
+              let link  = document.createElement('link');
+              link.id   = cssId;
+              link.rel  = 'stylesheet';
+              link.type = 'text/css';
+              link.href = '/assets/fonts/custom-icons/css/custom-icons.css';
+              link.media = 'all';
+              head.appendChild(link);
+          }
+      }
+
+      if (window.addEventListener) window.addEventListener("load", atOnload, false);
+      else if (window.attachEvent) window.attachEvent("onload", atOnload);
+      else window.onload = atOnload;
+  </script>
   </body>
 </html>

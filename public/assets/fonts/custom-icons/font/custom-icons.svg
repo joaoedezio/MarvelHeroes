@@ -1,0 +1,16 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2019 by original authors @ fontello.com</metadata>
+<defs>
+<font id="custom-icons" horiz-adv-x="1000" >
+<font-face font-family="custom-icons" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="play" unicode="&#xe800;" d="M486 376q14-10 14-26 0-14-14-24l-428-266q-24-16-41-6t-17 40l0 514q0 30 17 40t41-6z" horiz-adv-x="500" />
+
+<glyph glyph-name="times-solid" unicode="&#xe803;" d="M474 350l196 195c24 24 24 63 0 87l-44 44c-24 24-63 24-87 0l-195-196-196 196c-24 24-63 24-87 0l-43-44c-24-24-24-62 0-87l195-195-195-195c-24-24-24-63 0-87l43-44c24-24 63-24 87 0l196 196 195-196c24-24 63-24 87 0l44 44c24 24 24 63 0 87l-196 195z" horiz-adv-x="688" />
+
+<glyph glyph-name="_ionicons_svg_ios-play" unicode="&#xe80a;" d="M250 646v-592c0-13 13-21 23-14l470 296c10 6 10 22 0 28l-470 296c-10 7-23-1-23-14z" horiz-adv-x="1000" />
+</font>
+</defs>
+</svg>

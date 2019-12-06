@@ -6,8 +6,15 @@
   }
 }
 
+.showOnlyOnDesktop {
+  display: none;
+  @include desktop {
+    display: grid !important;
+  }
+}
+
 .hideOnMobile {
-  @include phone {
+  @include mobile {
     display: none !important;
   }
 }

@@ -1,0 +1,21 @@
+@import "../../styles/helpers/breakpoints";
+
+.characters {
+  display: grid;
+  grid-auto-rows: auto 1fr auto;
+}
+
+.loadingCharacters {
+  display: grid;
+  align-self: stretch;
+  align-items: center;
+  justify-items: center;
+}
+
+.footer {
+  grid-row: 3;
+  @include desktop {
+    min-height: 120px;
+  }
+  display: grid;
+}
