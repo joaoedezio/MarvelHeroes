@@ -11,4 +11,10 @@ export default {
       method: "GET",
     });
   },
+  getCharacter(characterId) {
+    return requestUtils({
+      url: `edge/characters/${characterId}`,
+      method: "GET",
+    });
+  },
 };

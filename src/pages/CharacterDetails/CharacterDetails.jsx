@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import mediaResource from "../../resources/media";
+import characterResource from "../../resources/character";
 import Backdrop from "../../components/Backdrop";
 import Text from "../../components/Text";
 import Image from "../../components/Image";
@@ -64,9 +65,13 @@ class CharacterDetails extends Component {
     return text.replace(/<[^>]*>/g, '');
   }
 
-  getCharacter() {
+  async getCharacter() {
     let character = this.props.characters.filter(char => char.id === this.idCharacter)[0];
     console.log(character);
+    if (!character) {
+      let response = await characterResource.getCharacter(this.idCharacter);
+      character = response.data.data;
+    }
     this.setState({ character });
     this.loadCharacterInfo();
   }
@@ -110,7 +115,7 @@ class CharacterDetails extends Component {
               <i className={"icon-times-solid"} />
             </button>
           </div>
-          {!this.state.loading ?
+          {!this.state.loading && character ?
             <div className={styles.content}>
               <div className={styles.basicInfo}>
                 <Image
@@ -124,7 +129,7 @@ class CharacterDetails extends Component {
                   <Text
                     type={"label"}
                   >
-                    {this.formatText(character.attributes.description)}
+                    {this.formatText(character.attributes.description || "Sem descrição")}
                   </Text>
                 </div>
               </div>
