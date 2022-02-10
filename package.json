@@ -34,7 +34,7 @@
     "@react-native-community/eslint-config": "^0.0.5",
     "eslint": "^6.6.0",
     "eslint-plugin-import-helpers": "^1.0.2",
-    "node-sass": "^4.13.0",
+    "node-sass": "^7.0.0",
     "style-loader": "^1.0.0"
   }
 }
